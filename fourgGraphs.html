@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js"></script>
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <title>Title</title>
+    <style>
+        .USstate rect {
+            fill: gray;
+            stroke-with:3;
+            stroke:gray;
+        }
+
+        .USstate text {
+            font: 19px sans-serif;
+            text-anchor: middle;
+            fill:black;
+
+        }
+
+        .twangtooltip {
+            font: 19px sans-serif;
+
+            padding: 10px;
+            background: rgba(255, 243, 196,0.9);
+            color: rgb(0, 46, 215);
+
+        }
+        .twanglegend {
+            stroke:none;
+        }
+
+        .twangaxis1 path,
+        .twangaxis1 line {
+            fill: none;
+
+            shape-rendering: crispEdges;
+        }
+        .twangaxis2 path,
+        .twangaxis2 line {
+            fill: none;
+
+            shape-rendering: crispEdges;
+        }
+
+        .twangtitle {
+            font: 17px sans-serif;
+            font-weight: bold
+        }
+        .twangsubtitle {
+            font: 14px sans-serif;
+        }
+
+        .node {
+            font: 300 10px "Helvetica Neue", Helvetica, Arial, sans-serif;
+            fill: #282828;
+        }
+
+        .node:hover {
+            fill: #2c5aaf;
+        }
+
+        .link {
+            stroke: #d5d8dd;
+            stroke-opacity: .4;
+            fill: none;
+            pointer-events: none;
+        }
+
+        .node:hover,
+        .node--source,
+        .node--target {
+            font-weight: 700;
+        }
+
+
+        .node--source {
+            fill: #d6111e;
+        }
+
+        .node--target {
+            fill: #d66435;
+        }
+
+
+        /*
+        .link--source,
+        .link--target {
+            stroke-opacity: 1;
+            stroke-width: 1.5px;
+        }
+
+        .link--source {
+            stroke: #030300;
+        }
+
+        .link--target {
+            stroke: #51d665;
+        }
+        */
+
+        /* levels Begin */
+
+        .link--level1 {
+            stroke-opacity: 1;
+            stroke-width: 2px;
+            stroke: #07d603;
+        }
+
+        .link--level2 {
+            stroke-opacity: 1;
+            stroke-width: 4px;
+            stroke: #d6b90d;
+        }
+
+        .link--level3 {
+            stroke-opacity: 1;
+            stroke-width: 6px;
+            stroke: #4091d6;
+        }
+
+        .link--level4 {
+            stroke-opacity: 1;
+            stroke-width: 8px;
+            stroke: #d61f2a;
+        }
+
+        .link--level5 {
+            stroke-opacity: 1;
+            stroke-width: 10px;
+            stroke: #8758d6;
+        }
+
+        /* levels End */
+        .tooltip {
+            font: 12px sans-serif;
+
+            padding: 10px;
+            background: rgba(255, 243, 196, 0.9);
+            color: rgb(0, 46, 215);
+
+        }
+        .connectiontext{
+            font-size: 12px;
+        }
+        h3{
+            position: relative;
+            left: 210px;
+        }
+        h2{
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+<script id="grid" type="text/plain">
+                              ME
+               WI          VT NH
+WA ID MT ND MN IL MI    NY MA
+OR NV WY SD IA IN OH PA NJ CT RI
+CA UT CO NE MO KY WV VA DC MD DE
+   AZ NM KS AR TN NC SC
+         OK LA MS AL GA
+HI AK    TX             FL
+</script>
+
+<div id="twangchart">
+    <script src="js/mapScript.js"></script>
+</div>
+
+<div id="connection">
+    <h3> Research Connections among Top 55 Universities in Computer Science Field </h3>
+    <script src="js/schoolConnectionScript.js"></script>
+</div>
+
+
+<div id="rank">
+    <h3>Composition of Computer Science Departments in Top 55 Universities</h3>
+    <script src="js/rankScript.js"></script>
+
+</div>
+
+<div id="area">
+    <h3>Proportion of Professors in Different Research Areas</h3>
+    <script src="js/areaScript.js"></script>
+</div>
+
+</body>
+</html>
